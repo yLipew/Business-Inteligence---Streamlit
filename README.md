@@ -197,30 +197,6 @@ with st.expander("Ver base de dados filtrada"):
 
 ---
 
-## ❗ Erros Comuns e Soluções
-
-### `KeyError: 'Date'`
-O CSV utilizado **não possui** uma coluna chamada `Date`. O arquivo `consulta.csv` tem colunas de anos (2014–2024) como indicadores temporais. O código foi adaptado para usar essas colunas em vez de uma coluna de data.
-
----
-
-### `ValueError: Index contains duplicate entries, cannot reshape`
-Ocorre ao usar `.pivot()` quando há mais de uma linha para a mesma combinação de `Localidade` + `Ano` (pois existem múltiplos indicadores na coluna `Variável`).
-
-**Solução:** substituir `.pivot()` por `.pivot_table(..., aggfunc='mean')`, que agrega os valores duplicados em vez de travar.
-
----
-
-### `missing ScriptRunContext`
-Este aviso aparece quando o script é executado com `python dashboard_app.py` em vez do comando correto do Streamlit.
-
-**Solução:**
-```bash
-streamlit run dashboard_app.py
-```
-
----
-
 ## 🛠️ Tecnologias Utilizadas
 
 <p>
