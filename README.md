@@ -216,3 +216,4 @@ with st.expander("Ver base de dados filtrada"):
 <p align="center">
   Desenvolvido para fins acadêmicos · Disciplina de Business Intelligence
 </p>
+
